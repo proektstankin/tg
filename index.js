@@ -8,11 +8,6 @@ const { dishes } = require("./data");
 
 const token = process.env.TELEGRAM_BOT_TOKEN;
 
-if (!token) {
-    console.error('Ошибка: Переменная окружения TELEGRAM_BOT_TOKEN не установлена.');
-    console.error('Убедитесь, что вы создали файл .env с TELEGRAM_BOT_TOKEN=ВАШ_ТОКЕН_БОТА или установили переменную окружения.');
-    process.exit(1);
-}
 const bot = new TelegramBot(token, { polling: true });
 
 
